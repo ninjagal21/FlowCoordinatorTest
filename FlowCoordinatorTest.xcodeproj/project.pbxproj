@@ -7,23 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84796D3026A5B06900B2BB18 /* DateOfBirthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84796D2E26A5B06900B2BB18 /* DateOfBirthViewController.swift */; };
+		84796D3126A5B06900B2BB18 /* DateOfBirthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84796D2F26A5B06900B2BB18 /* DateOfBirthViewController.xib */; };
+		84796D3326A5B3BC00B2BB18 /* SignUpVCFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84796D3226A5B3BC00B2BB18 /* SignUpVCFactory.swift */; };
+		848D803D26A1A8C900D72ABE /* SignupDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848D803C26A1A8C900D72ABE /* SignupDataManager.swift */; };
 		84B3B38B269387CF00B46D05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3B38A269387CF00B46D05 /* AppDelegate.swift */; };
-		84B3B38D269387CF00B46D05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3B38C269387CF00B46D05 /* SceneDelegate.swift */; };
 		84B3B38F269387CF00B46D05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3B38E269387CF00B46D05 /* ViewController.swift */; };
 		84B3B392269387CF00B46D05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B3B390269387CF00B46D05 /* Main.storyboard */; };
 		84B3B394269387D000B46D05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B3B393269387D000B46D05 /* Assets.xcassets */; };
 		84B3B397269387D000B46D05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B3B395269387D000B46D05 /* LaunchScreen.storyboard */; };
+		84B3B39F269387FD00B46D05 /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3B39E269387FD00B46D05 /* FlowCoordinator.swift */; };
+		84B3B3A12693896100B46D05 /* FlowCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3B3A02693896100B46D05 /* FlowCoordinatorFactory.swift */; };
+		84E2D030269DB3F300AFB6BA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E2D02F269DB3F300AFB6BA /* User.swift */; };
+		84E2D03D269DD75500AFB6BA /* NameSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E2D03B269DD75500AFB6BA /* NameSignUpViewController.swift */; };
+		84E2D03E269DD75500AFB6BA /* NameSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E2D03C269DD75500AFB6BA /* NameSignUpViewController.xib */; };
+		84E2D041269DD88800AFB6BA /* SurnameSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E2D03F269DD88800AFB6BA /* SurnameSignUpViewController.swift */; };
+		84E2D042269DD88800AFB6BA /* SurnameSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E2D040269DD88800AFB6BA /* SurnameSignUpViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84796D2E26A5B06900B2BB18 /* DateOfBirthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateOfBirthViewController.swift; sourceTree = "<group>"; };
+		84796D2F26A5B06900B2BB18 /* DateOfBirthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateOfBirthViewController.xib; sourceTree = "<group>"; };
+		84796D3226A5B3BC00B2BB18 /* SignUpVCFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVCFactory.swift; sourceTree = "<group>"; };
+		848D803C26A1A8C900D72ABE /* SignupDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupDataManager.swift; sourceTree = "<group>"; };
 		84B3B387269387CF00B46D05 /* FlowCoordinatorTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowCoordinatorTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B3B38A269387CF00B46D05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		84B3B38C269387CF00B46D05 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		84B3B38E269387CF00B46D05 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		84B3B391269387CF00B46D05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84B3B393269387D000B46D05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84B3B396269387D000B46D05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84B3B398269387D000B46D05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84B3B39E269387FD00B46D05 /* FlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
+		84B3B3A02693896100B46D05 /* FlowCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinatorFactory.swift; sourceTree = "<group>"; };
+		84E2D02F269DB3F300AFB6BA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		84E2D03B269DD75500AFB6BA /* NameSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameSignUpViewController.swift; sourceTree = "<group>"; };
+		84E2D03C269DD75500AFB6BA /* NameSignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NameSignUpViewController.xib; sourceTree = "<group>"; };
+		84E2D03F269DD88800AFB6BA /* SurnameSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurnameSignUpViewController.swift; sourceTree = "<group>"; };
+		84E2D040269DD88800AFB6BA /* SurnameSignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SurnameSignUpViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +76,65 @@
 		84B3B389269387CF00B46D05 /* FlowCoordinatorTest */ = {
 			isa = PBXGroup;
 			children = (
-				84B3B38A269387CF00B46D05 /* AppDelegate.swift */,
-				84B3B38C269387CF00B46D05 /* SceneDelegate.swift */,
+				84B3B398269387D000B46D05 /* Info.plist */,
+				84E2D036269DD6C500AFB6BA /* SignUp */,
+				84E2D035269DD68F00AFB6BA /* App */,
+				84E2D034269DD66A00AFB6BA /* Coordinator */,
+				84E2D033269DD65300AFB6BA /* ViewControllers */,
+				84E2D02E269DB3E400AFB6BA /* Model */,
+			);
+			path = FlowCoordinatorTest;
+			sourceTree = "<group>";
+		};
+		84E2D02E269DB3E400AFB6BA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84E2D02F269DB3F300AFB6BA /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84E2D033269DD65300AFB6BA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
 				84B3B38E269387CF00B46D05 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		84E2D034269DD66A00AFB6BA /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				84B3B39E269387FD00B46D05 /* FlowCoordinator.swift */,
+				84B3B3A02693896100B46D05 /* FlowCoordinatorFactory.swift */,
+				848D803C26A1A8C900D72ABE /* SignupDataManager.swift */,
+				84796D3226A5B3BC00B2BB18 /* SignUpVCFactory.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		84E2D035269DD68F00AFB6BA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				84B3B38A269387CF00B46D05 /* AppDelegate.swift */,
 				84B3B390269387CF00B46D05 /* Main.storyboard */,
 				84B3B393269387D000B46D05 /* Assets.xcassets */,
 				84B3B395269387D000B46D05 /* LaunchScreen.storyboard */,
-				84B3B398269387D000B46D05 /* Info.plist */,
 			);
-			path = FlowCoordinatorTest;
+			path = App;
+			sourceTree = "<group>";
+		};
+		84E2D036269DD6C500AFB6BA /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				84E2D03B269DD75500AFB6BA /* NameSignUpViewController.swift */,
+				84E2D03C269DD75500AFB6BA /* NameSignUpViewController.xib */,
+				84E2D03F269DD88800AFB6BA /* SurnameSignUpViewController.swift */,
+				84E2D040269DD88800AFB6BA /* SurnameSignUpViewController.xib */,
+				84796D2E26A5B06900B2BB18 /* DateOfBirthViewController.swift */,
+				84796D2F26A5B06900B2BB18 /* DateOfBirthViewController.xib */,
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +196,10 @@
 			files = (
 				84B3B397269387D000B46D05 /* LaunchScreen.storyboard in Resources */,
 				84B3B394269387D000B46D05 /* Assets.xcassets in Resources */,
+				84E2D03E269DD75500AFB6BA /* NameSignUpViewController.xib in Resources */,
+				84E2D042269DD88800AFB6BA /* SurnameSignUpViewController.xib in Resources */,
 				84B3B392269387CF00B46D05 /* Main.storyboard in Resources */,
+				84796D3126A5B06900B2BB18 /* DateOfBirthViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,9 +210,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84E2D03D269DD75500AFB6BA /* NameSignUpViewController.swift in Sources */,
+				84796D3326A5B3BC00B2BB18 /* SignUpVCFactory.swift in Sources */,
 				84B3B38F269387CF00B46D05 /* ViewController.swift in Sources */,
 				84B3B38B269387CF00B46D05 /* AppDelegate.swift in Sources */,
-				84B3B38D269387CF00B46D05 /* SceneDelegate.swift in Sources */,
+				84B3B39F269387FD00B46D05 /* FlowCoordinator.swift in Sources */,
+				84E2D030269DB3F300AFB6BA /* User.swift in Sources */,
+				84B3B3A12693896100B46D05 /* FlowCoordinatorFactory.swift in Sources */,
+				848D803D26A1A8C900D72ABE /* SignupDataManager.swift in Sources */,
+				84796D3026A5B06900B2BB18 /* DateOfBirthViewController.swift in Sources */,
+				84E2D041269DD88800AFB6BA /* SurnameSignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
