@@ -20,15 +20,21 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gc2-ax-u9p">
-                    <rect key="frame" x="103.5" y="406" width="207" height="84"/>
+                    <rect key="frame" x="103.5" y="386" width="207" height="124.5"/>
                     <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Birth" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5XB-a5-uJf">
+                            <rect key="frame" x="0.0" y="0.0" width="207" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q2V-GN-DjA">
-                            <rect key="frame" x="0.0" y="0.0" width="207" height="34"/>
+                            <rect key="frame" x="0.0" y="40.5" width="207" height="34"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UlK-f0-gBu">
-                            <rect key="frame" x="0.0" y="54" width="207" height="30"/>
+                            <rect key="frame" x="0.0" y="94.5" width="207" height="30"/>
                             <state key="normal" title="Next"/>
                             <connections>
                                 <action selector="nextAction:" destination="-1" eventType="touchUpInside" id="Od3-5m-Vc3"/>

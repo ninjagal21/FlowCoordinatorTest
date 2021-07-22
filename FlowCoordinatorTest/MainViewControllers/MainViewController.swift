@@ -7,13 +7,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     
     let flowCF: FlowCoordinatorFactoryProtocol = FlowCoordinatorFactory()
+    var viewModel: MainViewModelProtocol = MainViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func loginAction(_ sender: Any) {
@@ -21,8 +21,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func signUpAction(_ sender: Any) {
-        let flowCoordinator = flowCF.getCoordinator(navigationController: self.navigationController ?? UINavigationController(), type: .signUpFlow(user: nil)) { type in
+        var dataMode: FlowDataMode = .create
+        if let user = viewModel.user {dataMode = .edit(user: user)}
+        let flowCoordinator = flowCF.getCoordinator(navigationController: self.navigationController ?? UINavigationController(), type: .signUpFlow(user: nil), dataMode: dataMode) { [weak self] type in
             if case .signUpFlow(let user) = type {
+                self?.viewModel.user = user
                 print(user)
             }
         }
