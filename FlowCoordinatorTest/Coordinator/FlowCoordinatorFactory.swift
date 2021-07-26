@@ -17,6 +17,7 @@ enum FlowType {
 enum FlowDataMode {
     case create
     case edit(user: User)
+    
 }
 
 protocol FlowCoordinatorProtocol {

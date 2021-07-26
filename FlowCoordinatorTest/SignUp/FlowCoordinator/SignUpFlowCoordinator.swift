@@ -8,19 +8,18 @@
 import Foundation
 import UIKit
 
-enum SignUpVCStep {
-    case name(String?)
-    case surname(String?)
-    case dob(String?)
-}
-
 protocol SignUpVCDelegate: AnyObject {
-    func nextAction(stepType: SignUpVCStep?)
+    func nextAction(stepType: SignUpFlowCoordinator.SignUpVCStep?)
     func backButtonAction()
     
 }
 
 class SignUpFlowCoordinator: FlowCoordinatorProtocol {
+    enum SignUpVCStep {
+        case name(String?)
+        case surname(String?)
+        case dob(String?)
+    }
     
     weak var navigationController: UINavigationController?
     
@@ -44,7 +43,7 @@ class SignUpFlowCoordinator: FlowCoordinatorProtocol {
 
 extension SignUpFlowCoordinator: SignUpVCDelegate {
     func backButtonAction() {
-        signUpDataManager.decreaseStep()
+        signUpDataManager.updateCurrentStep(type: .decrease)
     }
 
     func nextAction(stepType: SignUpVCStep?) {
@@ -61,6 +60,7 @@ extension SignUpFlowCoordinator: SignUpVCDelegate {
         nextVC.delegate = self
 
         navigationController?.pushViewController(nextVC, animated: true)
+        signUpDataManager.updateCurrentStep(type: .increase)
     }
 
 }

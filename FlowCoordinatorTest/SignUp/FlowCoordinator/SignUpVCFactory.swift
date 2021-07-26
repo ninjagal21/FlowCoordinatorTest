@@ -8,11 +8,11 @@
 import Foundation
 
 protocol SignupVCFactoryProtocol {
-    func getVC(with type: SignUpVCStep) -> SignUpVCProtocol
+    func getVC(with type: SignUpFlowCoordinator.SignUpVCStep) -> SignUpVCProtocol
 }
 
 class SignUpVCFactory: SignupVCFactoryProtocol {
-    func getVC(with type: SignUpVCStep) -> SignUpVCProtocol {
+    func getVC(with type: SignUpFlowCoordinator.SignUpVCStep) -> SignUpVCProtocol {
         switch type {
         case .name(let name):
             return NameSignUpViewController(name: name)

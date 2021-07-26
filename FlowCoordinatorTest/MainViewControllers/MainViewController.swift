@@ -26,7 +26,7 @@ class MainViewController: UIViewController {
         let flowCoordinator = flowCF.getCoordinator(navigationController: self.navigationController ?? UINavigationController(), type: .signUpFlow(user: nil), dataMode: dataMode) { [weak self] type in
             if case .signUpFlow(let user) = type {
                 self?.viewModel.user = user
-                print(user)
+                print(user ?? "no values")
             }
         }
         flowCoordinator.startFlow()

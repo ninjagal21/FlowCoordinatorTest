@@ -10,26 +10,32 @@ import UIKit
 
 protocol SignupDataManagerProtocol {
     var user: User {get}
-    var steps: [SignUpVCStep] {get}
+    var steps: [SignUpFlowCoordinator.SignUpVCStep] {get}
     
     var dataMode: FlowDataMode {get}
     
-    init(dataMode: FlowDataMode, steps: [SignUpVCStep])
+    init(dataMode: FlowDataMode, steps: [SignUpFlowCoordinator.SignUpVCStep])
     
-    func setData(by step: SignUpVCStep)
-    func getNextStep() -> SignUpVCStep?
-    func decreaseStep()
+    func setData(by step: SignUpFlowCoordinator.SignUpVCStep)
+    func getNextStep() -> SignUpFlowCoordinator.SignUpVCStep?
+    func updateCurrentStep(type: SignupDataManager.StepChangeType)
+    
 }
 
 class SignupDataManager: SignupDataManagerProtocol {
+    enum StepChangeType {
+        case increase
+        case decrease
+    }
+    
     var dataMode: FlowDataMode
     
     var user = User()
-    var steps: [SignUpVCStep]
+    var steps: [SignUpFlowCoordinator.SignUpVCStep]
     
     private var currentStep = 0
     
-    required init(dataMode: FlowDataMode, steps: [SignUpVCStep]) {
+    required init(dataMode: FlowDataMode, steps: [SignUpFlowCoordinator.SignUpVCStep]) {
         if case .edit(let user) = dataMode {
             self.user = user
         }
@@ -38,7 +44,7 @@ class SignupDataManager: SignupDataManagerProtocol {
         self.dataMode = dataMode
     }
         
-    func setData(by step: SignUpVCStep) {
+    func setData(by step: SignUpFlowCoordinator.SignUpVCStep) {
         switch step {
         case .name(let name):
             guard let name = name else {
@@ -56,44 +62,54 @@ class SignupDataManager: SignupDataManagerProtocol {
         case .dob(let dob):
             user.birthdate = dob
         }
-        currentStep += 1
     }
     
-     func getNextStep() -> SignUpVCStep? {
-        if case .create = dataMode {
-            for step in steps {
-                switch step {
-                case .name:
-                    if user.name == nil {return .name(nil)}
-                case .surname(_):
-                    if user.surname == nil {return .surname(nil)}
-                case .dob(_):
-                    if user.birthdate == nil {return .dob(nil)}
-                }
-            }
+    func getNextStep() -> SignUpFlowCoordinator.SignUpVCStep? {
+        switch dataMode {
+        case .create:
+            return getCreateNextStep()
+        case .edit:
+            return getEditNextStep()
         }
-        
-        if case .edit(_) = dataMode {
-            if !steps.indices.contains(currentStep) {
-                return nil
-            }
-            
-            let step = steps[currentStep]
+    }
+    
+    private func getCreateNextStep() -> SignUpFlowCoordinator.SignUpVCStep? {
+        for step in steps {
             switch step {
-            case .name(_):
-                return .name(user.name)
-            case .surname(_):
-                return .surname(user.surname)
-            case .dob(_):
-                return .dob(user.birthdate)
+            case .name:
+                if user.name == nil {return .name(nil)}
+            case .surname:
+                if user.surname == nil {return .surname(nil)}
+            case .dob:
+                return user.birthdate == nil ? .dob(nil) : nil
             }
         }
-        
         return nil
     }
     
-    func decreaseStep() {
-        currentStep -= 1
+    private func getEditNextStep() -> SignUpFlowCoordinator.SignUpVCStep? {
+        if !steps.indices.contains(currentStep) {
+            return nil
+        }
+        
+        let step = steps[currentStep]
+        switch step {
+        case .name:
+            return .name(user.name)
+        case .surname:
+            return .surname(user.surname)
+        case .dob:
+            return .dob(user.birthdate)
+        }
+    }
+    
+    func updateCurrentStep(type: SignupDataManager.StepChangeType) {
+        switch type {
+        case .increase:
+            currentStep += 1
+        case .decrease:
+            currentStep -= 1
+        }
     }
     
 }

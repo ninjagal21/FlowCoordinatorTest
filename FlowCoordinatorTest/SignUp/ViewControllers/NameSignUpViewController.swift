@@ -27,7 +27,7 @@ class NameSignUpViewController: SignUpBaseViewController {
     }
 
     @IBAction func nextAction(_ sender: Any) {
-        delegate?.nextAction(stepType: SignUpVCStep.name(textField.text))
+        delegate?.nextAction(stepType: SignUpFlowCoordinator.SignUpVCStep.name(textField.text))
     }
     
 }
